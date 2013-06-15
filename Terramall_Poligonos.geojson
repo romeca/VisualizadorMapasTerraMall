@@ -1,0 +1,18 @@
+{
+"type": "FeatureCollection",
+                                                                                
+"features": [
+{ "type": "Feature", "id": 25069343, "properties": { "timestamp": "2008-06-24T18:26:48Z", "user": "vogtgbr", "tags": "\"amenity\"=\"parking\",\"name\"=\"Terra Mall\"", "name": "Terra Mall", "place": "", "highway": "", "landuse": "", "waterway": "", "railway": "", "amenity": "parking", "tourism": "", "learning": "" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -83.9972191, 9.9010789 ], [ -83.9970838, 9.900865 ], [ -83.997123, 9.9008214 ], [ -83.9972016, 9.9007777 ], [ -83.9973631, 9.9006904 ], [ -83.9974722, 9.9006773 ], [ -83.9975857, 9.9007428 ], [ -83.9972191, 9.9010789 ] ] ] } }
+,
+{ "type": "Feature", "id": 25069340, "properties": { "timestamp": "2008-06-24T18:26:47Z", "user": "vogtgbr", "tags": "\"amenity\"=\"parking\",\"name\"=\"Terra Mall\"", "name": "Terra Mall", "place": "", "highway": "", "landuse": "", "waterway": "", "railway": "", "amenity": "parking", "tourism": "", "learning": "" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -83.9968742, 9.9013495 ], [ -83.9968175, 9.9014106 ], [ -83.9967302, 9.9014237 ], [ -83.9966342, 9.9014063 ], [ -83.9963199, 9.9013233 ], [ -83.9961409, 9.9012928 ], [ -83.9959533, 9.9012797 ], [ -83.995866, 9.9010658 ], [ -83.9966996, 9.9008912 ], [ -83.9968742, 9.9013495 ] ] ] } }
+,
+{ "type": "Feature", "id": 25069341, "properties": { "timestamp": "2008-06-24T18:26:48Z", "user": "vogtgbr", "tags": "\"amenity\"=\"parking\",\"name\"=\"Terra Mall\"", "name": "Terra Mall", "place": "", "highway": "", "landuse": "", "waterway": "", "railway": "", "amenity": "parking", "tourism": "", "learning": "" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -83.9970576, 9.9009829 ], [ -83.9971536, 9.9011618 ], [ -83.9971187, 9.9012579 ], [ -83.9970532, 9.9012797 ], [ -83.996979, 9.901236 ], [ -83.9969092, 9.9010527 ], [ -83.9970576, 9.9009829 ] ] ] } }
+,
+{ "type": "Feature", "id": 35564873, "properties": { "timestamp": "2012-07-19T21:23:23Z", "user": "OSMF Redaction Account", "tags": "\"amenity\"=\"school\",\"name\"=\"Colegio Técnico Profesional Mario Quirós Sasso\"", "name": "Colegio Técnico Profesional Mario Quirós Sasso", "place": "", "highway": "", "landuse": "", "waterway": "", "railway": "", "amenity": "school", "tourism": "", "learning": "" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -83.9954852, 9.903113 ], [ -83.9956904, 9.9045252 ], [ -83.9945181, 9.9043505 ], [ -83.99436, 9.9033685 ], [ -83.9954852, 9.903113 ] ] ] } }
+,
+{ "type": "Feature", "id": 25069349, "properties": { "timestamp": "2008-06-24T18:26:49Z", "user": "vogtgbr", "tags": "\"amenity\"=\"parking\",\"name\"=\"Terra Mall\"", "name": "Terra Mall", "place": "", "highway": "", "landuse": "", "waterway": "", "railway": "", "amenity": "parking", "tourism": "", "learning": "" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -83.9957413, 9.9020622 ], [ -83.9956798, 9.9016516 ], [ -83.9955346, 9.9016767 ], [ -83.9954703, 9.9013275 ], [ -83.995286, 9.9013638 ], [ -83.9954117, 9.901984 ], [ -83.9956324, 9.9020902 ], [ -83.9957413, 9.9020622 ] ] ] } }
+,
+{ "type": "Feature", "id": 25069344, "properties": { "timestamp": "2008-06-24T18:26:48Z", "user": "vogtgbr", "tags": "\"amenity\"=\"parking\",\"name\"=\"Terra Mall\"", "name": "Terra Mall", "place": "", "highway": "", "landuse": "", "waterway": "", "railway": "", "amenity": "parking", "tourism": "", "learning": "" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -83.9981357, 9.9022923 ], [ -83.9968611, 9.902563 ], [ -83.9967869, 9.9022967 ], [ -83.9980877, 9.9020174 ], [ -83.9981357, 9.9022923 ] ] ] } }
+
+]
+}

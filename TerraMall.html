@@ -1,0 +1,126 @@
+<html>
+    <head>
+        
+        <title>Visualizador: Terramall</title>
+        
+        <meta charset="utf-8" />
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet"
+		href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.css"/>
+        
+    </head>
+    <body>
+            <div id="map" style="width: 800px; height: 600px"></div>
+        
+            <script src="http://cdn.leafletjs.com/leaflet-0.5/leaflet.js"></script>
+            
+            <script>
+            
+            function onEachFeature(feature, layer) {
+            layer.bindPopup("Propiedades: "+ feature.properties.tags);
+            };
+		
+            var Nivel1 = new L.LayerGroup();
+            var Nivel2 = new L.LayerGroup();
+            var Nivel3 = new L.LayerGroup();
+            var Calles = new L.LayerGroup();
+            var Poligonos = new L.LayerGroup();
+	    var xhr = new XMLHttpRequest();
+            
+
+            xhr.open('GET','Terramall_Lineas.geojson',false);
+            xhr.send(null);
+            var terraLineas = JSON.parse(xhr.responseText);
+            var style1 = {
+            "color": "#424242",
+            "weight": 5,
+            "opacity": 0.65
+            };
+
+            xhr.open('GET','Terramall_Poligonos.geojson',false);
+            xhr.send(null);
+            var terraPoligonos = JSON.parse(xhr.responseText);
+            var style2 = {
+            "color": "#6699FF",
+            "weight": 3,
+            "opacity": 0.65
+            };
+
+            xhr.open('GET','Terramall_Nivel1.geojson',false);
+            xhr.send(null);
+            var nivel1 = JSON.parse(xhr.responseText);
+            var style3 = {
+            "color": "#FF00FF",
+            "weight": 3,
+            "opacity": 0.65
+            };
+
+            xhr.open('GET','Terramall_Nivel2.geojson',false);
+            xhr.send(null);
+            var nivel2 = JSON.parse(xhr.responseText);
+            var style4 = {
+            "color": "#660033",
+            "weight": 3,
+            "opacity": 0.65
+            };
+
+            xhr.open('GET','Terramall_Nivel3.geojson',false);
+            xhr.send(null);
+            var nivel3 = JSON.parse(xhr.responseText);
+            var style5 = {
+            "color": "#81F7BE",
+            "weight": 3,
+            "opacity": 0.65
+            };
+
+            var cmAttr = 'Map data &copy; 2011 OpenStreetMap contributors, Imagery &copy; 2011 CloudMade',
+            cmUrl = 'http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/{styleId}/256/{z}/{x}/{y}.png';
+            var VistaDia = L.tileLayer(cmUrl, {styleId: 22677, attribution: cmAttr}), VistaNoche  = L.tileLayer(cmUrl, {styleId: 999,   attribution: cmAttr});
+            
+            L.geoJson(terraLineas, {
+                style: style1, onEachFeature: onEachFeature
+            }).addTo(Calles);
+
+            L.geoJson(terraPoligonos, {
+                style: style2, onEachFeature: onEachFeature
+            }).addTo(Poligonos);
+
+            L.geoJson(nivel1, {
+                style: style3, onEachFeature: onEachFeature
+            }).addTo(Nivel1);
+
+            L.geoJson(nivel2, {
+                style: style4, onEachFeature: onEachFeature
+            }).addTo(Nivel2);
+
+            L.geoJson(nivel3, {
+                style: style5, onEachFeature: onEachFeature
+            }).addTo(Nivel3);
+            
+                
+            var map = L.map('map', {
+                    center: [9.90188,-83.99683],
+                    zoom: 17,
+                    layers: [VistaDia, Nivel1]
+            });
+
+            var baseLayers = {
+                    "Dia": VistaDia,
+                    "Noche": VistaNoche
+            };
+
+            var overlays = {
+                    "Nivel 1": Nivel1,
+                    "Nivel 2": Nivel2,
+                    "Nivel 3": Nivel3,
+                    "Poligonos": Poligonos,
+                    "Calles": Calles
+            };
+           
+            L.control.layers(baseLayers, overlays).addTo(map);
+            L.control.scale().addTo(map);
+        </script>
+    </body>
+</html>
